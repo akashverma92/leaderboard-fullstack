@@ -1,0 +1,43 @@
+.claim-history {
+  margin-top: 40px;
+  font-family: sans-serif;
+  padding: 0 20px;
+}
+
+.claim-history h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.history-list {
+  max-width: 600px;
+  margin: auto;
+}
+
+.history-row {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f8ff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.username {
+  font-weight: bold;
+  flex: 1;
+}
+
+.points {
+  color: green;
+  width: 80px;
+  text-align: center;
+}
+
+.date {
+  color: #555;
+  font-size: 13px;
+  width: 150px;
+  text-align: right;
+}

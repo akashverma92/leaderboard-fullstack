@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+#  Leaderboard App — Full Stack Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A real-time leaderboard application where users can claim points and get ranked. Top 3 are styled with 3D cards, and remaining are listed. Built with React, Node.js, Express, and MongoDB Atlas.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+##  Live App
+> [Frontend Live (Vercel)](https://your-leaderboard.vercel.app)  
 
-### `npm start`
+##  Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Frontend: React, Plain CSS
+- Backend: Node.js, Express.js
+- Database: MongoDB Atlas (Cloud)
+-Icons: react-icons
+-Deployment: Vercel (frontend)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+##  Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-  Add users via top-left profile icon (modal popup)
+-  Claim random points (1–10) via coin icon (modal popup)
+-  Leaderboard auto-ranks users by total points
+-  Top 3 users displayed in elevated 3D layout
+-  Ranks 4–10 displayed in styled list layout
+-  MongoDB collection logs claim history
+-  Auto-refresh every 2 seconds (simulated real-time updates)
+-  Responsive across all screen sizes (desktop-first focus)
 
-### `npm run build`
+##  Folder Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+leaderboard-task/
+├── backend/
+│   └── server.js
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── README.md
+├── .env
+├── README.md
+└── requirements.txt
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Local Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Clone Repo
 
-### `npm run eject`
+bash
+git clone https://github.com/akashverma92/leaderboard-task.git
+cd leaderboard-task
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+###  2. Start Backend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bash
+cd backend
+npm install
+node server.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+>  Make sure you have a `.env` file:
+MONGODB_URI=your-mongodb-uri
+PORT=5000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🔹 3. Start Frontend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+bash
+cd ../frontend
+npm install
+npm start
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## MongoDB Setup
 
-### Analyzing the Bundle Size
+- Use MongoDB Atlas Free Cluster
+- Store connection string in `.env`
+- Automatically creates:
+  - `users` collection
+  - `claimHistory` collection (every point claim is logged)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Author
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Akash Verma  
+_B.Tech Final Year  
+GitHub: [@yourusername](https://github.com/akashverma92)

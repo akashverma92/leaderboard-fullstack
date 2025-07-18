@@ -1,0 +1,10 @@
+Backend Dependencies:
+- express
+- cors
+- dotenv
+- mongoose
+- nodemon (for development)
+
+To install:
+npm install express cors dotenv mongoose
+npm install --save-dev nodemon
