@@ -5,7 +5,7 @@ const ClaimHistory = () => {
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/history')
+    fetch('https://leaderboard-backend-x4v1.onrender.com/history')
       .then(res => res.json())
       .then(data => setHistory(data.reverse())) 
       .catch(err => console.error(err));

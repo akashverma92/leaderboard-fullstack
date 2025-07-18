@@ -5,7 +5,7 @@ const Leaderboard = () => {
   const [users, setUsers] = useState([]);
 
   const fetchLeaderboard = () => {
-    fetch('http://localhost:5000/leaderboard')
+    fetch('https://leaderboard-backend-x4v1.onrender.com/leaderboard')
       .then(res => res.json())
       .then(data => setUsers(data))
       .catch(err => console.error(err));

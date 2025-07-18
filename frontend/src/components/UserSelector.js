@@ -12,7 +12,7 @@ const UserSelector = () => {
   const [showClaimModal, setShowClaimModal] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:5000/users')
+    fetch('https://leaderboard-backend-x4v1.onrender.com/users')
       .then(res => res.json())
       .then(data => setUsers(data))
       .catch(err => console.error(err));
@@ -20,7 +20,7 @@ const UserSelector = () => {
 
   const handleClaim = () => {
     if (!selectedUserId) return alert('Please select a user');
-    fetch(`http://localhost:5000/claim/${selectedUserId}`, {
+    fetch(`https://leaderboard-backend-x4v1.onrender.com/claim/${selectedUserId}`, {
       method: 'POST',
     })
       .then(res => res.json())
@@ -33,7 +33,7 @@ const UserSelector = () => {
 
   const handleAddUser = () => {
     if (!newUserName.trim()) return;
-    fetch('http://localhost:5000/users', {
+    fetch('https://leaderboard-backend-x4v1.onrender.com/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: newUserName }),
